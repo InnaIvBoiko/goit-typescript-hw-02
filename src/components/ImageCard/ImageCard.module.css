@@ -1,0 +1,51 @@
+.card {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  border: 1px solid #2a2a2a;
+  border-radius: 4px;
+}
+
+.img {
+  width: 300px;
+  height: 250px;
+  border-radius: 4px;
+  overflow: hidden;
+  cursor: zoom-in;
+}
+
+img {
+  height: 250px;
+  width: 300px;
+  object-fit: cover;
+}
+
+.information {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 8px;
+  min-height: 90px;
+}
+
+p {
+  text-transform: capitalize;
+}
+
+span {
+  font-weight: 600;
+}
+
+.description {
+  word-spacing: -1px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.description:hover,
+.description:focus {
+  white-space: wrap;
+  cursor: progress;
+}
