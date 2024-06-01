@@ -21,13 +21,10 @@ export default function App() {
     urls: {
       regular: '',
     },
+    isOpen: false,
   });
 
-  //  const handleModalToggle = (): void => {
-  //   setModalIsOpen((prev) => !prev);
-  // };
-  
-  const openModal = (newRegularSrc: ImageForModal): any => {
+  const openModal = (newRegularSrc: any): void => {
     setModalIsOpen(true);
     setRegularSrc(newRegularSrc);
   };

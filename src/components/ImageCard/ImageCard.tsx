@@ -12,13 +12,14 @@ export default function ImageCard({ item, openModal }: Props) {
         urls: {
             regular: item.urls.regular,
         },
+        isOpen: true,
     };
     openModal(modalData);
   };
 
     return (
         <div className={css.card}>
-            <div className={css.img} onClick={()=> handleClick}>
+            <div className={css.img} onClick={handleClick}>
                 <img src={item.urls.small} alt={item.alt_description} />
             </div>
             

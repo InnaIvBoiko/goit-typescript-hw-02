@@ -12,7 +12,7 @@ type Props = {
 export default function ImageModal({onOpen, onClose, src}: Props) {
     return (
         <Modal
-            isOpen={onOpen}
+            isOpen={src.isOpen}
             onRequestClose={onClose}
             overlayClassName={css.overlay}
             className={css.content}
