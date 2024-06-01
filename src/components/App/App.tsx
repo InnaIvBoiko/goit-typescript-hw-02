@@ -21,18 +21,20 @@ export default function App() {
     urls: {
       regular: '',
     },
-    isOpen: false,
   });
 
-  const openModal = (newRegularSrc: any): void => {
-    setModalIsOpen(true);
+  const handleModalOpen = (): void => {
+    setModalIsOpen((prev) => !prev);
+  };
+
+  const openModal = (newRegularSrc: ImageForModal): void => {
     setRegularSrc(newRegularSrc);
+    handleModalOpen();
   };
 
   const closeModal = (): void => {
     setModalIsOpen(false);
   };
-
 
   const handleSearch = (newQuery: string): void => {
     setQuery(newQuery);
@@ -80,7 +82,12 @@ export default function App() {
 
       {!isLoading && totalPages > page && <LoadMoreBtn more={handleLoadMore} />}
 
-      {modalIsOpen && <ImageModal onOpen={openModal} onClose={closeModal} src={regularSrc} /> }
+      <ImageModal
+        onOpen={modalIsOpen}
+        onClose={handleModalOpen}
+        src={regularSrc}
+      />
+      
     </div>
   );
 }

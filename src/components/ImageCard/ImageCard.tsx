@@ -12,7 +12,6 @@ export default function ImageCard({ item, openModal }: Props) {
         urls: {
             regular: item.urls.regular,
         },
-        isOpen: true,
     };
     openModal(modalData);
   };

@@ -14,7 +14,6 @@ export interface ImageForModal {
     urls: {
         regular: string;
     };
-    isOpen: boolean;
 };
 
 export interface Data {

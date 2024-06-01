@@ -4,15 +4,15 @@ import { ImageForModal } from '../interfaces';
 import css from './ImageModal.module.css';
 
 type Props = {
-  onOpen: boolean;
-  onClose: () => void;
-  src: ImageForModal;
+    onOpen: boolean;
+    onClose: () => void;
+    src: ImageForModal;
 };
 
 export default function ImageModal({onOpen, onClose, src}: Props) {
     return (
         <Modal
-            isOpen={src.isOpen}
+            isOpen={onOpen}
             onRequestClose={onClose}
             overlayClassName={css.overlay}
             className={css.content}
